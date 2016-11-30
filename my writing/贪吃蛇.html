@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+</head>
+<body>
+<canvas></canvas>
+<script>
+    var canvas=document.querySelector('canvas');
+        canvas.width=600;
+        canvas.height=600;
+        canvas.style.border='1px solid #ccc';
+    var ctx=canvas.getContext('2d');
+    //蛇身 食物-随机 方向0：right  1:left 2:up  3:down
+    //确定初始的坐标点
+    var x=10;
+    var y=10;
+    //定义初始蛇身的长度
+    var length=10;
+    //蛇每增加一个的单元大小
+    var size=10;
+    //方向
+    var direction=0;
+    //保存蛇的行进目标
+    var road=[];
+    //食物坐标
+    var foodx=0;
+    var foody=0;
+    var timer;
+    timer=setInterval(function(){
+     switch(direction){
+         case 0:
+             x=x+size;
+             break;
+         case 1:
+             x=x-size;
+             break;
+         case 2:
+             y=y-size;
+             break;
+         case 3:
+             y=y+size;
+             break;
+         default:
+             x=x+size;
+             break;
+     }
+     //判断是否撞墙
+        if(x >=canvas.width||y >=canvas.height||x<=0||y<=0){
+            console.log('game over');
+            clearInterval(timer);
+        }
+      //当长度超过定义的蛇身长度时，截取数组进行清除矩形
+        if(road.length>length){
+            var arr=road.shift();
+            ctx.clearRect(arr.x,arr.y,size,size);
+        }
+        //循环这个数组，如果数组中的坐标与蛇行进的坐标相同，表示自己吃到了自己
+        for(var i=0;i<road.length;i++){
+            if(road[i].x==x && road[i].y==y){
+                console.log('game over');
+                clearInterval(timer);
+            }
+        }
+        if(foodx*size==x && foody*size==y){
+            foods();//再次随机产生食物
+            length++;//蛇身加一
+        }
+
+        //把每次行进添加的坐标添加到road
+        road.push({
+            'x':x,
+            'y':y
+        });
+        //在画布上绘制蛇身
+        ctx.beginPath();
+        ctx.fillStyle='green';
+        ctx.fillRect(x,y,size,size);
+    },100);
+    document.addEventListener('keydown',function(e){
+        var key= e.keyCode;
+        switch (key){
+            case 40:
+                direction=3;
+                break;
+            case 37:
+                direction=1;
+                break;
+            case 39:
+                direction=0;
+                break;
+            case 38:
+                direction=2;
+                break;
+        }
+    });
+    function foods(){
+        //随机添加食物坐标，保证是整数，可以和蛇身坐标吻合
+        foodx=Math.ceil(Math.random()*50);
+        foody=Math.ceil(Math.random()*50);
+        ctx.beginPath();
+        ctx.fillStyle='red';
+        ctx.fillRect(foodx*size,foody*size,size,size);
+    }
+    foods();
+
+</script>
+</body>
+</html>

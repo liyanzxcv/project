@@ -1,0 +1,192 @@
+.all{
+    min-width:300px;
+    max-width: 640px;
+    margin:0 auto;
+}
+.section1{
+    width:100%;
+    background-color: #fff;
+}
+.section1 h3,.section3 .gengduo h3,.section4 h3{
+    width: 97%;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    font-size: 1.8rem;
+    padding: 2.5% 0 2% 3%;
+    border-bottom: 1px solid #ccc;
+}
+.section1 ul{
+    overflow: hidden;
+    text-align: center;
+}
+.section1  ul  li{
+    float:left;
+    width:33%;
+    height:15rem;
+}
+.section1  ul  li img{
+    display:inline-block;
+    width: 50%;
+    margin: 25px 0 20px;
+
+}
+.section1  ul  li p{
+    font-size: 1.6rem;
+    color:#9d9d9d;
+}
+.jrl_banner{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.pic_box{
+    width:500%;
+    height: 9rem;
+    /*overflow: hidden;*/
+    transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+}
+.pic_box li{
+    width:20%;
+    float: left;
+    height: 9rem;
+    margin: 10px 0  5px;
+
+}
+/*.jrl_banner  ul li a{
+    display:inline-block;
+    !*height: 9rem;*!
+}*/
+.jrl_banner  ul li  a  img{
+    display:inline-block;
+    width: 100%;
+    height: 9rem;
+}
+/*点盒子*/
+.jrl_banner  .point-circle{
+    width: 15%;
+    height:1rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5%;
+    bottom: 1.5rem;
+}
+.jrl_banner .point-circle  .point{
+    height: 8px;
+    width: 8px;
+    border-radius: 3px;
+    float: left;
+    margin-left: 10px;
+    background: #f0eff5;
+}
+.jrl_banner .point-circle   li.now{
+    background: #0894ec;
+}
+.style{
+    width:100%;
+    height:5rem;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.style span{
+    display: inline-block;
+    width:40%;
+    height:3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    background-color: #0894ec;
+    color:#fff;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 1.6rem;
+}
+.section3{
+    width:100%;
+    background-color: #fff;
+    position:relative;
+}
+.section3 .gengduo  span,.section4 .gengduo span{
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    font-size: 1.6rem;
+}
+
+
+.section3  ul {
+    width:100%;
+    height: 43rem;
+
+}
+.section3 ul li{
+    width:96%;
+    padding: 15px 0 0 25px;
+    position:relative;
+    border-bottom: 1px solid #ccc;
+}
+.section3 ul li p{
+    height: 2.5rem;
+    font-size: 1.6rem;
+}
+.section3 ul li span{
+    font-size: 1.6rem;
+    color: #158cf2;
+    margin-bottom: 10px;
+    display: block;
+}
+.section3 ul  li  a{
+    display: inline-block;
+    width: 6%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 18px;
+
+}
+.section3 ul  li  .red{
+    background-color: red;
+    right: 93px;
+}
+.section3 ul  li  .blue{
+    background-color: blue;
+    right:47px;
+}
+.section3 ul  li i{
+    position:absolute;
+    top: 47px;
+    right: 45px;
+}
+.section4{
+    margin-top:10px;
+    width:100%;
+    background-color: #fff;
+    position:relative;
+}
+.section4 ul{
+    width:100%;
+    overflow: hidden;
+    text-align: center;
+}
+.section4 ul li{
+    float:left;
+    width:33%;
+    height:11rem;
+}
+.section4 ul li img{
+    display:inline-block;
+    width: 50%;
+    height: 4rem;
+    margin: 25px 0 20px;
+}
+.section4  ul  li p{
+    font-size: 1.6rem;
+    color:#9d9d9d;
+}
+
+
+
+
